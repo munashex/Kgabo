@@ -1,6 +1,7 @@
 import HomeImage from '../imgs/home/Home.avif'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Commodities from '../components/Commodities'
 
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
             />
             
             {/* Gradient overlay - fixed the gradient class */}
-            <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/70 to-transparent"></div>
         
             <div className="absolute top-20 left-3 lg:left-16  space-y-3 lg:space-y-4">
                 <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white drop-shadow-2xl">Kgabo Mokgatla Group</h1>
@@ -33,7 +34,8 @@ const Home = () => {
         </div>
 
 
-       
+       {/* commodities section */} 
+       <Commodities/>
         </div>
     )
 }
