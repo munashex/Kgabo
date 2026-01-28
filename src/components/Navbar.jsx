@@ -1,12 +1,13 @@
 import Logo from '../imgs/Logo.png'
 import { CgMenu } from "react-icons/cg";
-import { Link } from 'react-router-dom'; 
+import { Link, useLocation } from 'react-router-dom'; 
 import {useState} from 'react'
 import { RiCloseFill } from "react-icons/ri";
 
+
 const navLinks = [ 
     {
-    name: "Home", path: "/home"
+    name: "Home", path: "/"
     }, 
     {
     name: "About", path: "/about"
@@ -25,11 +26,12 @@ const navLinks = [
 const Navbar = () => {
     const [toggleNav, setToggleNav] = useState(false) 
     const handleNav = () => setToggleNav(!toggleNav)
+    const location = useLocation()
 
     return (
         <div>
          {/* navbar on sm and md screens */} 
-         <div className='flex justify-between  px-2 py-2 lg:hidden'> 
+         <div className='flex justify-between  px-2 mt-2 lg:hidden'> 
         
            {/* Logo container - takes full width for centering */}
            <div className="">
@@ -88,7 +90,7 @@ const Navbar = () => {
          null} 
 
          {/* navbar on lg screen */} 
-         <div className="hidden py-3 lg:flex items-center justify-between px-16">
+         <div className="hidden mt-3 lg:flex items-center justify-between px-16">
            <Link to="/">
              <img src={Logo} alt="KGABO MOKGATLA GROUP" 
              className="w-56"
