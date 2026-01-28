@@ -1,7 +1,7 @@
 import HomeImage from '../imgs/home/Home.avif'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import Commodities from '../components/Commodities'
+
 
 const Home = () => {
     return (
@@ -33,7 +33,7 @@ const Home = () => {
         </div>
 
 
-        <Commodities/>
+       
         </div>
     )
 }
