@@ -1,48 +1,44 @@
 import { Link } from "react-router-dom";
 
-const ValuesHero = () => {
-    const heroValues = [
-        "Environmental Preservation",
-        "Encouraging a Learning Culture", 
-        "Sustainability and Consistency",
-        "Ubuntu"
-    ];
-
+const OperationsStats = () => {
     return (
         <div className="relative w-full h-100 lg:h-125">
+            {/* Background Image */}
             <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                    backgroundImage: 'url("https://gemad.co/assets/geological-8c571165.jpg")'
+                    backgroundImage: 'url("https://gemad.co/assets/mining-9d5a4668.jpg")'
                 }}
             >
                 {/* FULL COVERAGE gradient - covers entire image */}
-                <div className="absolute inset-0 bg-linear-to-b from-black/90 via-black/70 to-black/50">
-                    {/* Extra dark fade at TOP */}
-                    <div className="absolute top-0 left-0 right-0 h-48 bg-linear-to-b from-black to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/70 to-black/50">
+                    {/* Extra dark fade at BOTTOM */}
+                    <div className="absolute bottom-0 left-0 right-0 h-48 bg-linear-to-t from-black to-transparent"></div>
                 </div>
             </div>
             
             <div className="relative h-full flex items-center px-4 lg:px-16">
                 <div className="max-w-2xl space-y-4">
                     <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white drop-shadow-2xl">
-                        Values Driving Us
+                        Mining Operations Across
                     </h1>
                     
                     <div className="space-y-3">
-                        {heroValues.map((value, index) => (
-                            <div key={index} className="flex items-center">
-                                <div className="w-2 h-2 bg-[#04b7ef] rounded-full mr-3"></div>
-                                <span className="text-white text-lg lg:text-xl drop-shadow-md">{value}</span>
-                            </div>
-                        ))}
+                        <div className="flex items-baseline gap-2">
+                            <span className="text-white text-lg lg:text-xl drop-shadow-md">
+                                7
+                            </span>
+                            <span className="text-white text-lg lg:text-xl drop-shadow-md">
+                                Strategic Locations
+                            </span>
+                        </div>
                     </div>
                     
                     <Link 
-                        to="/about"
+                        to="/operations"
                         className="inline-flex items-center gap-2 mt-6 px-6 lg:px-8 py-3 lg:py-4 bg-[#024177] hover:bg-[#04b7ef] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg group"
                     >
-                        <span>Read Our Story</span>
+                        <span>Browse Operations</span>
                         <svg 
                             className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
                             fill="none" 
@@ -58,4 +54,4 @@ const ValuesHero = () => {
     );
 };
 
-export default ValuesHero;
+export default OperationsStats;

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Commodities from '../components/Commodities'
 import Values from '../components/Values'
 import ValuesHero from '../components/ValuesHero'
+import OperationsStats from '../components/ OperationsStats'
 
 
 const Home = () => {
@@ -42,7 +43,11 @@ const Home = () => {
        {/* values section */} 
        <Values/>
 
-       <ValuesHero/>
+       <OperationsStats/>
+        {/* values hero section */}
+       <ValuesHero/> 
+
+         
         </div>
     )
 }

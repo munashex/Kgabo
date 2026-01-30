@@ -6,21 +6,21 @@ import { RiCloseFill } from "react-icons/ri";
 
 
 const navLinks = [ 
-    {
-    name: "Home", path: "/"
-    }, 
-    {
-    name: "About", path: "/about"
-    }, 
-    {
-    name: "Our Team", path: "/team", 
-    },
-    {
-    name: "Services", path: "/services"
-    },
-    {
-    name: "Contact", path: "/contact"
-    }
+  {
+  name: "Home", path: "/"
+  }, 
+  {
+  name: "About", path: "/about"
+  }, 
+  {
+  name: "Our Team", path: "/team", 
+  },
+  {
+  name: "Operations", path: "/operations" 
+  },
+  {
+  name: "Contact", path: "/contact"
+  }
 ]
 
 const Navbar = () => {
