@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Operations from './Pages/Operations'
 import ExplorationProjects from './Pages/Exploration'
 import About from './Pages/About'
+import Team from './Pages/OurTeam'
 
 function App() { 
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/operations" element={<Operations/>}/> 
         <Route path="/exploration" element={<ExplorationProjects/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/team" element={<Team/>}/>
       </Routes>
       </div>
     </Router>
