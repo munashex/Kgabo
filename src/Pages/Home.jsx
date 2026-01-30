@@ -3,6 +3,7 @@ import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Commodities from '../components/Commodities'
 import Values from '../components/Values'
+import ValuesHero from '../components/ValuesHero'
 
 
 const Home = () => {
@@ -40,6 +41,8 @@ const Home = () => {
 
        {/* values section */} 
        <Values/>
+
+       <ValuesHero/>
         </div>
     )
 }
