@@ -5,7 +5,7 @@ import Commodities from '../components/Commodities'
 import Values from '../components/Values'
 import ValuesHero from '../components/ValuesHero'
 import OperationsStats from '../components/ OperationsStats'
-
+import GetInTouch from '../components/GetInTouch'
 
 const Home = () => {
     return (
@@ -27,7 +27,7 @@ const Home = () => {
                 
                 {/* Learn More Button with Icon */}
                 <Link 
-                    to="/services" 
+                    to="/operations" 
                     className="inline-flex items-center gap-2 mt-4 lg:mt-6 px-6 lg:px-8 py-3 lg:py-4 bg-[#024177] hover:bg-[#04b7ef] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg group"
                 >
                     <span>Learn More</span>
@@ -46,6 +46,7 @@ const Home = () => {
        <OperationsStats/>
         {/* values hero section */}
        <ValuesHero/> 
+       <GetInTouch/>
 
          
         </div>
