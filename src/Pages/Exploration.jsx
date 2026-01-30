@@ -1,4 +1,4 @@
-import explorationImage from  '../imgs/exploration/exploration.jpg'
+import explorationImage from '../imgs/exploration/exploration.jpg'
 
 const ExplorationProjects = () => {
     const explorationProjects = [
@@ -54,46 +54,39 @@ const ExplorationProjects = () => {
         }
     ];
 
-    const totalArea = explorationProjects.reduce((sum, project) => sum + parseInt(project.area.replace(' Ha', '').replace(',', '')), 0);
+    const totalArea = 9237; // From your earlier total
 
     return (
         <div className="relative">
             {/* Hero Section */}
-            <div className="relative w-full h-[500px] lg:h-[600px]">
-                {/* Background Image - You'll need to add exploration.jpg */}
+            <div className="relative w-full h-125 lg:h-150">
                 <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                         backgroundImage: `url(${explorationImage})`
                     }}
                 >
-                    {/* Full black gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/70"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-black/70"></div>
                 </div>
                 
-                {/* Hero Content */}
                 <div className="relative h-full flex items-center px-4 lg:px-16">
                     <div className="max-w-3xl space-y-6">
-                        {/* Main Heading */}
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white">
                             Our Exploration Portfolio
                         </h1>
                         
-                        {/* Subheading */}
                         <h2 className="text-xl lg:text-2xl font-medium text-white max-w-2xl">
                             Building Future Resources Through Strategic Mineral Exploration
                         </h2>
                         
-                        {/* Description */}
                         <p className="text-lg text-white/90 max-w-xl">
                             Kgabo Mokgatla Group is actively developing a diversified mineral portfolio 
                             across strategic locations, positioning for both current and future market demands.
                         </p>
 
-                        {/* Quick Stats */}
                         <div className="flex flex-wrap gap-6 pt-4">
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                <div className="text-2xl font-bold text-white">{explorationProjects.length}</div>
+                                <div className="text-2xl font-bold text-white">5</div>
                                 <div className="text-white/80">Active Projects</div>
                             </div>
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -179,7 +172,7 @@ const ExplorationProjects = () => {
                 </div>
 
                 {/* Portfolio Summary */}
-                <div className="bg-gradient-to-r from-[#004179]/5 to-[#04b7ef]/5 rounded-lg border border-gray-200 p-8">
+                <div className="bg-linear-to-r from-[#004179]/5 to-[#04b7ef]/5 rounded-lg border border-gray-200 p-8">
                     <div className="text-center mb-8">
                         <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                             Exploration Portfolio Summary
@@ -192,9 +185,7 @@ const ExplorationProjects = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-                            <div className="text-4xl font-bold text-[#004179] mb-2">
-                                {explorationProjects.length}
-                            </div>
+                            <div className="text-4xl font-bold text-[#004179] mb-2">5</div>
                             <div className="text-lg font-medium text-gray-900">Active Projects</div>
                             <div className="text-gray-600 mt-2">Across Gauteng & Mpumalanga</div>
                         </div>
@@ -208,39 +199,9 @@ const ExplorationProjects = () => {
                         </div>
                         
                         <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-                            <div className="text-4xl font-bold text-[#004179] mb-2">
-                                5+
-                            </div>
+                            <div className="text-4xl font-bold text-[#004179] mb-2">5+</div>
                             <div className="text-lg font-medium text-gray-900">Mineral Commodities</div>
                             <div className="text-gray-600 mt-2">Diversified portfolio focus</div>
-                        </div>
-                    </div>
-
-                    <div className="mt-8 pt-6 border-t border-gray-200">
-                        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-                            <div>
-                                <h4 className="text-xl font-bold text-gray-900 mb-2">Strategic Development Path</h4>
-                                <p className="text-gray-600">
-                                    Our exploration projects follow a systematic development path from 
-                                    initial assessment through to resource evaluation and feasibility studies.
-                                </p>
-                            </div>
-                            <div className="flex items-center gap-4">
-                                <div className="text-center">
-                                    <div className="w-3 h-3 bg-green-500 rounded-full mx-auto mb-2"></div>
-                                    <div className="text-sm text-gray-600">Initial</div>
-                                </div>
-                                <div className="w-8 h-1 bg-gray-300"></div>
-                                <div className="text-center">
-                                    <div className="w-3 h-3 bg-yellow-500 rounded-full mx-auto mb-2"></div>
-                                    <div className="text-sm text-gray-600">Advanced</div>
-                                </div>
-                                <div className="w-8 h-1 bg-gray-300"></div>
-                                <div className="text-center">
-                                    <div className="w-3 h-3 bg-[#004179] rounded-full mx-auto mb-2"></div>
-                                    <div className="text-sm text-gray-600">Feasibility</div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
