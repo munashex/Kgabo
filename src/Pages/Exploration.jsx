@@ -59,14 +59,14 @@ const ExplorationProjects = () => {
     return (
         <div className="relative">
             {/* Hero Section - Fixed for mobile */}
-            <div className="relative w-full h-[500px] lg:h-[600px]">
+            <div className="relative w-full h-125 lg:h-150">
                 <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                         backgroundImage: `url(${explorationImage})`
                     }}
                 >
-                    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/90"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/95 to-black/90"></div>
                 </div>
                 
                 {/* Hero Content - Adjusted spacing for mobile */}
@@ -174,7 +174,7 @@ const ExplorationProjects = () => {
                 </div>
 
                 {/* Portfolio Summary */}
-                <div className="bg-gradient-to-r from-[#004179]/5 to-[#04b7ef]/5 rounded-lg border border-gray-200 p-6 lg:p-8">
+                <div className="bg-linear-to-r from-[#004179]/5 to-[#04b7ef]/5 rounded-lg border border-gray-200 p-6 lg:p-8">
                     <div className="text-center mb-6 lg:mb-8">
                         <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                             Exploration Portfolio Summary
