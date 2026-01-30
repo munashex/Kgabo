@@ -2,6 +2,7 @@ import HomeImage from '../imgs/home/Home.avif'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Commodities from '../components/Commodities'
+import Values from '../components/Values'
 
 
 const Home = () => {
@@ -36,6 +37,9 @@ const Home = () => {
 
        {/* commodities section */} 
        <Commodities/>
+
+       {/* values section */} 
+       <Values/>
         </div>
     )
 }
