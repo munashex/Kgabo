@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const OperationsStats = () => {
     return (
-        <div className="relative w-full h-100 lg:h-125">
+        <div className="relative w-full h-100 lg:h-125 mt-20 lg:mt-32">
             {/* Background Image */}
             <div 
                 className="absolute inset-0 bg-cover bg-center"
