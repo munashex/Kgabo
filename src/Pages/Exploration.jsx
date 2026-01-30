@@ -54,48 +54,50 @@ const ExplorationProjects = () => {
         }
     ];
 
-    const totalArea = 9237; // From your earlier total
+    const totalArea = 9237;
 
     return (
         <div className="relative">
-            {/* Hero Section */}
-            <div className="relative w-full h-125 lg:h-150">
+            {/* Hero Section - Fixed for mobile */}
+            <div className="relative w-full h-[500px] lg:h-[600px]">
                 <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                         backgroundImage: `url(${explorationImage})`
                     }}
                 >
-                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-black/70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/90"></div>
                 </div>
                 
+                {/* Hero Content - Adjusted spacing for mobile */}
                 <div className="relative h-full flex items-center px-4 lg:px-16">
-                    <div className="max-w-3xl space-y-6">
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white">
+                    <div className="max-w-3xl space-y-4 lg:space-y-6">
+                        <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-white">
                             Our Exploration Portfolio
                         </h1>
                         
-                        <h2 className="text-xl lg:text-2xl font-medium text-white max-w-2xl">
+                        <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-white max-w-2xl">
                             Building Future Resources Through Strategic Mineral Exploration
                         </h2>
                         
-                        <p className="text-lg text-white/90 max-w-xl">
+                        <p className="text-base md:text-lg text-white/90 max-w-xl">
                             Kgabo Mokgatla Group is actively developing a diversified mineral portfolio 
                             across strategic locations, positioning for both current and future market demands.
                         </p>
 
-                        <div className="flex flex-wrap gap-6 pt-4">
-                            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                <div className="text-2xl font-bold text-white">5</div>
-                                <div className="text-white/80">Active Projects</div>
+                        {/* Stats - Stacked on mobile */}
+                        <div className="flex flex-wrap gap-4 pt-4">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 lg:p-4">
+                                <div className="text-xl lg:text-2xl font-bold text-white">5</div>
+                                <div className="text-white/80 text-sm lg:text-base">Active Projects</div>
                             </div>
-                            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                <div className="text-2xl font-bold text-white">{totalArea.toLocaleString()} Ha</div>
-                                <div className="text-white/80">Total Exploration Area</div>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 lg:p-4">
+                                <div className="text-xl lg:text-2xl font-bold text-white">{totalArea.toLocaleString()} Ha</div>
+                                <div className="text-white/80 text-sm lg:text-base">Total Area</div>
                             </div>
-                            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                <div className="text-2xl font-bold text-white">5+</div>
-                                <div className="text-white/80">Target Commodities</div>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 lg:p-4">
+                                <div className="text-xl lg:text-2xl font-bold text-white">5+</div>
+                                <div className="text-white/80 text-sm lg:text-base">Target Commodities</div>
                             </div>
                         </div>
                     </div>
@@ -103,7 +105,7 @@ const ExplorationProjects = () => {
             </div>
 
             {/* Exploration Projects Grid */}
-            <div className="mt-16 lg:mt-28 px-4 lg:px-16">
+            <div className="mt-12 lg:mt-28 px-4 lg:px-16">
                 <div className="mb-8 lg:mb-12">
                     <h2 className="text-2xl font-bold lg:text-4xl mb-4">
                         Exploration Projects
@@ -120,24 +122,24 @@ const ExplorationProjects = () => {
                             key={project.name}
                             className="bg-white border-l-4 border-[#004179] rounded-r-lg p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
                         >
-                            <div className="flex items-start justify-between mb-4">
-                                <div>
+                            <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3">
+                                <div className="flex-1">
                                     <h3 className="text-xl lg:text-2xl font-bold text-[#004179]">
                                         {project.name}
                                     </h3>
-                                    <div className="flex items-center gap-2 mt-1">
+                                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mt-1">
                                         <span className="text-gray-600">{project.location}</span>
-                                        <span className="text-gray-400">•</span>
+                                        <span className="hidden sm:inline text-gray-400">•</span>
                                         <span className="font-medium text-gray-900">{project.area}</span>
                                     </div>
                                 </div>
-                                <span className="px-3 py-1 bg-blue-50 text-[#004179] text-sm font-medium rounded-full">
+                                <span className="px-3 py-1 bg-blue-50 text-[#004179] text-sm font-medium rounded-full self-start sm:self-auto">
                                     {project.status}
                                 </span>
                             </div>
 
                             <div className="space-y-4 mt-6">
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
                                         <div className="text-gray-500 mb-1">Exploration Stage</div>
                                         <div className="font-medium text-gray-900">{project.stage}</div>
@@ -172,8 +174,8 @@ const ExplorationProjects = () => {
                 </div>
 
                 {/* Portfolio Summary */}
-                <div className="bg-linear-to-r from-[#004179]/5 to-[#04b7ef]/5 rounded-lg border border-gray-200 p-8">
-                    <div className="text-center mb-8">
+                <div className="bg-gradient-to-r from-[#004179]/5 to-[#04b7ef]/5 rounded-lg border border-gray-200 p-6 lg:p-8">
+                    <div className="text-center mb-6 lg:mb-8">
                         <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                             Exploration Portfolio Summary
                         </h3>
@@ -183,25 +185,25 @@ const ExplorationProjects = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-                            <div className="text-4xl font-bold text-[#004179] mb-2">5</div>
-                            <div className="text-lg font-medium text-gray-900">Active Projects</div>
-                            <div className="text-gray-600 mt-2">Across Gauteng & Mpumalanga</div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+                        <div className="text-center p-4 lg:p-6 bg-white rounded-lg border border-gray-200">
+                            <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">5</div>
+                            <div className="text-base lg:text-lg font-medium text-gray-900">Active Projects</div>
+                            <div className="text-gray-600 text-sm lg:text-base mt-2">Across Gauteng & Mpumalanga</div>
                         </div>
                         
-                        <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-                            <div className="text-4xl font-bold text-[#004179] mb-2">
+                        <div className="text-center p-4 lg:p-6 bg-white rounded-lg border border-gray-200">
+                            <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">
                                 {totalArea.toLocaleString()} Ha
                             </div>
-                            <div className="text-lg font-medium text-gray-900">Total Exploration Area</div>
-                            <div className="text-gray-600 mt-2">Strategic land portfolio</div>
+                            <div className="text-base lg:text-lg font-medium text-gray-900">Total Exploration Area</div>
+                            <div className="text-gray-600 text-sm lg:text-base mt-2">Strategic land portfolio</div>
                         </div>
                         
-                        <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-                            <div className="text-4xl font-bold text-[#004179] mb-2">5+</div>
-                            <div className="text-lg font-medium text-gray-900">Mineral Commodities</div>
-                            <div className="text-gray-600 mt-2">Diversified portfolio focus</div>
+                        <div className="text-center p-4 lg:p-6 bg-white rounded-lg border border-gray-200">
+                            <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">5+</div>
+                            <div className="text-base lg:text-lg font-medium text-gray-900">Mineral Commodities</div>
+                            <div className="text-gray-600 text-sm lg:text-base mt-2">Diversified portfolio focus</div>
                         </div>
                     </div>
                 </div>
