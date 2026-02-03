@@ -1,4 +1,6 @@
 import explorationImage from '../imgs/exploration/exploration.jpg'
+import Seo from '../components/Seo' 
+import { SEO_CONFIG } from '../constants/seo'
 
 const ExplorationProjects = () => {
     const explorationProjects = [
@@ -57,6 +59,8 @@ const ExplorationProjects = () => {
     const totalArea = 9237;
 
     return (
+        <>
+        <Seo {...SEO_CONFIG.exploration} />
         <div className="relative">
             {/* Hero Section - Fixed for mobile */}
             <div className="relative w-full h-125 lg:h-150">
@@ -209,6 +213,7 @@ const ExplorationProjects = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

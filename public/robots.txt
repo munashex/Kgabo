@@ -1,0 +1,40 @@
+# Kgabo Mokgatla Group - Robots Exclusion Protocol
+# Last updated: 2026
+
+User-agent: *
+Allow: /
+
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /api/
+
+# Allow all crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Site language
+User-agent: *
+Disallow: /*?*lang=
+
+# Site currency
+User-agent: *
+Disallow: /*?*currency=
+
+# Host
+Host: https://kgmgroup.co.za
+
+# Comment for webmaster
+# For any questions, contact: info@kgmgroup.co.za

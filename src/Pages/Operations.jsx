@@ -1,4 +1,6 @@
 import operationsImage from '../imgs/operations/operations.jpg'
+import Seo from '../components/Seo' 
+import { SEO_CONFIG } from '../constants/seo'
 
 const Operations = () => {
     const operations = [
@@ -54,6 +56,8 @@ const Operations = () => {
     ];
 
     return (
+        <>
+        <Seo {...SEO_CONFIG.operations} />
         <div className="relative">
             {/* Hero Section */}
             <div className="relative w-full h-100 lg:h-125">
@@ -174,6 +178,7 @@ const Operations = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

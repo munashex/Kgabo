@@ -1,4 +1,6 @@
 import teamImage from '../imgs/team/team.jpg'
+import Seo from '../components/Seo' 
+import { SEO_CONFIG } from '../constants/seo'
 
 const Team = () => {
     const teamMembers = [
@@ -21,6 +23,8 @@ const Team = () => {
     ];
 
     return (
+        <>
+        <Seo {...SEO_CONFIG.team} />
         <div className="relative">
             {/* Hero Section */}
             <div className="relative w-full h-100 lg:h-125">
@@ -190,6 +194,7 @@ const Team = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

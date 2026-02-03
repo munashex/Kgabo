@@ -1,9 +1,13 @@
 import contactImage from '../imgs/contact/contact.jpg'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo';
+import { SEO_CONFIG } from '../constants/seo';
 
 const Contact = () => {
     return (
+        <>
+         <Seo {...SEO_CONFIG.contact} />
         <div className="relative">
             {/* Hero Section */}
             <div className="relative w-full h-100 lg:h-125">
@@ -240,6 +244,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

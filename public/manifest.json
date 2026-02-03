@@ -1,0 +1,27 @@
+{
+    "name": "Kgabo Mokgatla Group",
+    "short_name": "KGM Group",
+    "description": "100% black-owned South African mining company specializing in mineral exploration and development",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#004179",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "/favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon-16x16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }
+    ]
+  }

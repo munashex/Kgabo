@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaHome } from 'react-icons/fa';
+import Seo from '../components/Seo';
+import { SEO_CONFIG } from '../constants/seo';
+
 
 const NotFound = () => {
     return (
+        <>
+        <Seo {...SEO_CONFIG.notFound} />
         <div className="relative min-h-screen flex items-center justify-center bg-linear-to-b from-[#004179] to-[#024177]">
             {/* Content */}
             <div className="relative px-4 lg:px-16 py-16 text-center">
@@ -80,6 +85,7 @@ const NotFound = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

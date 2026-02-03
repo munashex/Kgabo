@@ -8,6 +8,8 @@ import iron from '../imgs/home/iron.avif'
 import limestone from '../imgs/home/limestone.webp' 
 import platinum from '../imgs/home/plantinum.jpeg' 
 import manganese from '../imgs/home/manganese.jpeg' 
+import Seo from '../components/Seo' 
+import { SEO_CONFIG } from '../constants/seo'
 
 const About = () => {
     const scrollRef = useRef(null);
@@ -75,6 +77,8 @@ const About = () => {
     ];
 
     return (
+        <>
+        <Seo {...SEO_CONFIG.about} />
         <div className="relative">
             {/* Hero Section */}
             <div className="relative w-full h-125 lg:h-150">
@@ -321,6 +325,7 @@ const About = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

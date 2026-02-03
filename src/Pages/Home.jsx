@@ -5,11 +5,14 @@ import Commodities from '../components/Commodities'
 import Values from '../components/Values'
 import ValuesHero from '../components/ValuesHero'
 import OperationsStats from '../components/ OperationsStats'
-import GetInTouch from '../components/GetInTouch'
+import GetInTouch from '../components/GetInTouch' 
+import Seo from '../components/Seo' 
+import { SEO_CONFIG } from '../constants/seo'
 
 const Home = () => {
     return (
-        <div>
+        <> 
+        <Seo {...SEO_CONFIG.home} />
         <div className="relative">
             <img 
                 src={HomeImage} 
@@ -49,7 +52,7 @@ const Home = () => {
        <GetInTouch/>
 
          
-        </div>
+        </>
     )
 }
 
