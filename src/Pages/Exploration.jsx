@@ -66,7 +66,7 @@ const ExplorationProjects = () => {
                         backgroundImage: `url(${explorationImage})`
                     }}
                 >
-                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/95 to-black/90"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-black/70"></div>
                 </div>
                 
                 {/* Hero Content - Adjusted spacing for mobile */}

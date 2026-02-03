@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import valueBgImage from '../imgs/exploration/exploration.jpg'
 
 const ValuesHero = () => {
     const heroValues = [
@@ -13,7 +14,7 @@ const ValuesHero = () => {
             <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                    backgroundImage: 'url("https://gemad.co/assets/geological-8c571165.jpg")'
+                    backgroundImage: `url(${valueBgImage})`
                 }}
             >
                 {/* FULL COVERAGE gradient - covers entire image */}

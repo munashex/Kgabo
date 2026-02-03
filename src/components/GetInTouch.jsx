@@ -27,7 +27,7 @@ const GetInTouch = () => {
                         <div className="space-y-4">
                             {/* Phone Button - More compact */}
                             <a 
-                                href="tel:"
+                                href="tel:+27120043942"
                                 className="inline-flex items-center gap-3 p-4 bg-[#024177] hover:bg-[#04b7ef] text-white rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg group w-full max-w-sm"
                             >
                                 <div className="p-2 bg-white/20 rounded-md">

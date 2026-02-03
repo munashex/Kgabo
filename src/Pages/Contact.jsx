@@ -13,7 +13,7 @@ const Contact = () => {
                         backgroundImage: `url(${contactImage})`
                     }}
                 >
-                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-black/70"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/50 to-black/50"></div>
                 </div>
                 
                 <div className="relative h-full flex items-center px-4 lg:px-16">
@@ -69,9 +69,10 @@ const Contact = () => {
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">Phone</h3>
                             </div>
-                            <div className="text-lg text-gray-700">
-                                +27 (0) 000 0000
-                            </div>
+                            <a 
+                             href="tel:+27120043942" className="text-lg text-gray-700 hover:text-[#004179] transition-colors duration-300">
+                                +27 12 004 3942
+                            </a>
                             <p className="text-gray-600 mt-2 text-sm">
                                 Office hours: Monday - Friday, 8:00 AM - 5:00 PM
                             </p>

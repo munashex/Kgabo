@@ -7,7 +7,7 @@ const OperationsStats = () => {
             <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                    backgroundImage: 'url("https://gemad.co/assets/mining-9d5a4668.jpg")'
+                    backgroundImage: 'url("https://gemad.co/assets/geological-8c571165.jpg")'
                 }}
             >
                 {/* FULL COVERAGE gradient - covers entire image */}
