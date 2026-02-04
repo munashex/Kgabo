@@ -27,7 +27,7 @@ const Footer = () => {
     const commodities = [
         "Coal",
         "Chrome",
-        "Iron",
+        "Iron Ore",
         "Limestone",
         "Platinum",
         "Manganese"
