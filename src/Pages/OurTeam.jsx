@@ -1,6 +1,8 @@
 import teamImage from '../imgs/team/team.jpg'
 import Seo from '../components/Seo' 
 import { SEO_CONFIG } from '../constants/seo'
+import molefe from '../imgs/team/molefe.jpg' 
+import phenya from '../imgs/team/phenya.jpg'
 
 const Team = () => {
     const teamMembers = [
@@ -9,14 +11,14 @@ const Team = () => {
             position: "Chairman & Managing Director",
             experience: "12+ years in mining and industrial sector",
             description: "Provides strategic leadership and electrical engineering expertise across all operations.",
-            image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            image: molefe
         },
         {
             name: "Reolebogile H. Phenya",
             position: "CEO & Managing Director",
             experience: "Registered Professional Natural Scientist (Pr.Nat.Sci.) with 6+ years in coal mining",
             description: "Leads geological strategy, exploration programs, and resource management.",
-            image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            image: phenya
         }
     ];
 
