@@ -111,17 +111,17 @@ const Contact = () => {
                         <div className="p-6 border-b border-gray-200">
                             <div className="flex items-center gap-3">
                                 <FaMapMarkerAlt className="w-5 h-5 text-[#004179]" />
-                                <h3 className="text-lg font-bold text-gray-900">Stanton Estate, Gauteng</h3>
+                                <h3 className="text-lg font-bold text-gray-900">Menlyn Corporate Park, Pretoria</h3>
                             </div>
                             <p className="text-gray-600 mt-1">
-                                Strategic location for mining operations and project development
+                                175 Corobay Avenue, Suite O Fourth Floor, WaterKloof Glen, Pretoria 0181
                             </p>
                         </div>
                         
                         {/* Google Maps Embed */}
                         <div className="w-full h-100 lg:h-125">
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.892978018575!2d28.36736777537927!3d-26.135032261160397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e953dbfaa0b5ff7%3A0x614a9839854cae8!2sStanton%20Estate!5e0!3m2!1sen!2sza!4v1769804728357!5m2!1sen!2sza"
+                                src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d57485.6980795786!2d28.2788086!3d-25.7753152!3m2!1i1024!2i768!4f13.1!2m1!1sKgabo%20Mokgatla%20Group%20Pty%20Ltd%20175%20Corobay%20Avenue%20Menlyn%20Corporate%20Park%20Suite%20O%20Fourth%20Floor%20WaterKloof%20Glen%20Pretoria%200181!5e0!3m2!1sen!2sza!4v1770191569761!5m2!1sen!2sza"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

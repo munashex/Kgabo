@@ -8,6 +8,7 @@ import About from './Pages/About'
 import Team from './Pages/OurTeam'
 import Contact from './Pages/Contact'
 import NotFound from './Pages/NotFound'
+import Commodities from './Pages/Commodities'
 
 function App() { 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/commodities" element={<Commodities/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>

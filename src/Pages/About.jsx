@@ -102,9 +102,7 @@ const About = () => {
                         </h2>
                         
                         <p className="text-lg text-white/90 max-w-xl">
-                            100% black-owned mining group specializing in exploration, 
-                            project development, and technical advisory services across 
-                            South Africa's mineral-rich regions.
+                        100% black-owned mining group specializing in exploration, project development, and technical advisory services across Africa’s mineral-rich regions.
                         </p>
 
                         <Link 

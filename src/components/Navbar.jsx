@@ -16,6 +16,7 @@ const Navbar = () => {
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
         { name: "Our Team", path: "/team" },
+        {name: "Commodities", path: "/commodities"},
         { 
             name: "Business Focus", 
             isDropdown: true,
