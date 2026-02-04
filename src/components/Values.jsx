@@ -28,7 +28,7 @@ const values = [
 
 const Values = () => {
     return (
-        <div className="mt-16 lg:mt-28 px-4 lg:px-16">
+        <div className="mt-16 lg:mt-36 px-4 lg:px-16">
             <h1 className="text-2xl font-bold lg:text-4xl mb-4">
                 The Values Behind Kgabo Mokgatla Group
             </h1>

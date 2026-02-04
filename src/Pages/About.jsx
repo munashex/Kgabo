@@ -2,12 +2,12 @@ import aboutImage from '../imgs/about/about.jpg'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useRef, useEffect } from 'react';
-import coal from '../imgs/home/coal.jpg' 
-import chrome from '../imgs/home/chrome.avif' 
-import iron from '../imgs/home/iron.avif' 
-import limestone from '../imgs/home/limestone.webp' 
-import platinum from '../imgs/home/plantinum.jpeg' 
-import manganese from '../imgs/home/manganese.jpeg' 
+import coal from '../imgs/home/coal.png' 
+import chrome from '../imgs/home/chrome.png' 
+import iron from '../imgs/home/iron.png' 
+import limestone from '../imgs/home/limestone.png' 
+import platinum from '../imgs/home/platinum.png' 
+import manganese from '../imgs/home/manganese.png'
 import Seo from '../components/Seo' 
 import { SEO_CONFIG } from '../constants/seo'
 
@@ -61,7 +61,6 @@ const About = () => {
         {
             name: "Molefe H. Ratsela",
             position: "Chairman & Managing Director",
-            qualifications: "Electrical Engineer (B.Eng); Master Installation Electricians (MIE)",
             experience: "12+ years in mining and industrial sector",
             description: "Provides strategic leadership and electrical engineering expertise across all operations.",
             image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -69,7 +68,6 @@ const About = () => {
         {
             name: "Reolebogile H. Phenya",
             position: "CEO & Managing Director",
-            qualifications: "BSc (Hons.) Geology; MSc. Mineral Resource Management",
             experience: "Registered Professional Natural Scientist (Pr.Nat.Sci.) with 6+ years in coal mining",
             description: "Leads geological strategy, exploration programs, and resource management.",
             image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -102,7 +100,7 @@ const About = () => {
                         </h2>
                         
                         <p className="text-lg text-white/90 max-w-xl">
-                        100% black-owned mining group specializing in exploration, project development, and technical advisory services across Africa’s mineral-rich regions.
+                        100% black-owned mining group specializing in exploration, project development, and technical advisory services across Africa's mineral-rich regions.
                         </p>
 
                         <Link 
@@ -195,10 +193,21 @@ const About = () => {
                             </div>
                         ))}
                     </div>
+
+                    {/* View All Commodities Link */}
+                    <div className="mt-4 text-center">
+                        <Link 
+                            to="/commodities"
+                            className="inline-flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-[#024177] hover:bg-[#04b7ef] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg group"
+                        >
+                            <span>View All Commodities</span>
+                            <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Focus Areas */}
-                <div className="mb-16 lg:mb-24">
+                <div className="mb-16 lg:mb-32 lg:mt-28">
                     <h2 className="text-2xl font-bold lg:text-4xl mb-8">
                         Our Core Focus Areas
                     </h2>
@@ -273,11 +282,6 @@ const About = () => {
                                         <p className="text-gray-600 mb-3">{leader.position}</p>
                                         
                                         <div className="space-y-2">
-                                            <div>
-                                                <div className="text-gray-500 text-sm mb-1">Qualifications</div>
-                                                <p className="text-gray-800">{leader.qualifications}</p>
-                                            </div>
-                                            
                                             <div>
                                                 <div className="text-gray-500 text-sm mb-1">Experience</div>
                                                 <p className="text-gray-800">{leader.experience}</p>

@@ -7,7 +7,6 @@ const Team = () => {
         {
             name: "Molefe H. Ratsela",
             position: "Chairman & Managing Director",
-            qualifications: "Electrical Engineer (B.Eng); Master Installation Electricians (MIE)",
             experience: "12+ years in mining and industrial sector",
             description: "Provides strategic leadership and electrical engineering expertise across all operations.",
             image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -15,7 +14,6 @@ const Team = () => {
         {
             name: "Reolebogile H. Phenya",
             position: "CEO & Managing Director",
-            qualifications: "BSc (Hons.) Geology; MSc. Mineral Resource Management",
             experience: "Registered Professional Natural Scientist (Pr.Nat.Sci.) with 6+ years in coal mining",
             description: "Leads geological strategy, exploration programs, and resource management.",
             image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -94,11 +92,6 @@ const Team = () => {
                                         <p className="text-gray-600 mb-3">{member.position}</p>
                                         
                                         <div className="space-y-2">
-                                            <div>
-                                                <div className="text-gray-500 text-sm mb-1">Qualifications</div>
-                                                <p className="text-gray-800">{member.qualifications}</p>
-                                            </div>
-                                            
                                             <div>
                                                 <div className="text-gray-500 text-sm mb-1">Experience</div>
                                                 <p className="text-gray-800">{member.experience}</p>

@@ -1,10 +1,12 @@
 import { useRef, useEffect } from 'react';
-import coal from '../imgs/home/coal.jpg' 
-import chrome from '../imgs/home/chrome.avif' 
-import iron from '../imgs/home/iron.avif' 
-import limestone from '../imgs/home/limestone.webp' 
-import platinum from '../imgs/home/plantinum.jpeg' 
-import manganese from '../imgs/home/manganese.jpeg' 
+import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
+import coal from '../imgs/home/coal.png' 
+import chrome from '../imgs/home/chrome.png' 
+import iron from '../imgs/home/iron.png' 
+import limestone from '../imgs/home/limestone.png' 
+import platinum from '../imgs/home/platinum.png' 
+import manganese from '../imgs/home/manganese.png'
 
 const commodities = [ 
     {
@@ -75,6 +77,17 @@ const Commodities = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            {/* View All Commodities Link */}
+            <div className="mt-4 text-center">
+                <Link 
+                    to="/commodities"
+                    className="inline-flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-[#024177] hover:bg-[#04b7ef] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg group"
+                >
+                    <span>View All Commodities</span>
+                    <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
             </div>
         </div>
     )

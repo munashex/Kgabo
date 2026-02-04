@@ -8,42 +8,53 @@ const ExplorationProjects = () => {
     const provinceFootprint = [
         {
             province: "Mpumalanga",
-            area: "3,270 Ha",
-            projects: 1,
             description: "Strategic location in South Africa's mining heartland with rich mineral deposits.",
-            commodities: ["Coal", "Manganese", "Chrome"]
+            commodities: ["Coal", "Manganese", "Chrome", "Gold"]
         },
         {
             province: "Gauteng",
-            area: "5,967 Ha",
-            projects: 4,
             description: "Multiple exploration licenses across key mining corridors with established infrastructure.",
-            commodities: ["Coal", "Chrome", "Industrial Minerals"]
+            commodities: ["Coal", "Chrome", "Industrial Minerals", "Gold"]
+        },
+        {
+            province: "North West",
+            description: "Diverse mineral portfolio with focus on precious and base metals.",
+            commodities: ["Chrome", "Platinum", "Iron Ore", "Lead Ore", "Zinc"]
+        },
+        {
+            province: "KwaZulu-Natal",
+            description: "Strategic exploration in the province's mineral-rich regions.",
+            commodities: ["Bauxite"]
+        },
+        {
+            province: "Northern Cape",
+            description: "Exploration focused on industrial and base metals in the Northern Cape region.",
+            commodities: ["Limestone", "Manganese", "Iron Ore"]
         }
     ];
 
     const commodityFocus = [
         {
             commodity: "Coal",
-            icon: "⚫",
+            icon: "⛏️",
             coverage: "All Provinces",
             description: "Primary focus mineral with extensive exploration across our entire portfolio"
         },
         {
             commodity: "Chrome",
-            icon: "⚪",
+            icon: "💎",
             coverage: "Gauteng, Mpumalanga",
             description: "Strategic mineral with growing market demand and export potential"
         },
         {
             commodity: "Iron",
-            icon: "🔴",
+            icon: "🔩",
             coverage: "Selected Regions",
             description: "Targeted exploration in mineral-rich geological formations"
         },
         {
             commodity: "Manganese",
-            icon: "🟣",
+            icon: "⚙️",
             coverage: "Mpumalanga",
             description: "High-value mineral with significant industrial applications"
         }
@@ -99,7 +110,7 @@ const ExplorationProjects = () => {
                                 <div className="text-white/80 text-sm lg:text-base">Total Area</div>
                             </div>
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 lg:p-4">
-                                <div className="text-xl lg:text-2xl font-bold text-white">4+</div>
+                                <div className="text-xl lg:text-2xl font-bold text-white">10+</div>
                                 <div className="text-white/80 text-sm lg:text-base">Target Commodities</div>
                             </div>
                         </div>
@@ -114,8 +125,8 @@ const ExplorationProjects = () => {
                         Provincial Footprint
                     </h2>
                     <p className="text-lg lg:text-xl lg:max-w-3xl">
-                        Our strategic exploration portfolio spans {totalArea.toLocaleString()} hectares across 
-                        Gauteng and Mpumalanga, targeting multiple mineral commodities for future development.
+                        Our strategic exploration portfolio spans across five provinces, 
+                        targeting multiple mineral commodities for future development.
                     </p>
                 </div>
 
@@ -125,17 +136,10 @@ const ExplorationProjects = () => {
                             key={province.province}
                             className="bg-white border-l-4 border-[#004179] rounded-r-lg p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
                         >
-                            <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3">
-                                <div className="flex-1">
-                                    <h3 className="text-xl lg:text-2xl font-bold text-[#004179]">
-                                        {province.province}
-                                    </h3>
-                                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mt-1">
-                                        <span className="font-medium text-gray-900">{province.area}</span>
-                                        <span className="hidden sm:inline text-gray-400">•</span>
-                                        <span className="text-gray-600">{province.projects} {province.projects === 1 ? 'Project' : 'Projects'}</span>
-                                    </div>
-                                </div>
+                            <div className="mb-4">
+                                <h3 className="text-xl lg:text-2xl font-bold text-[#004179]">
+                                    {province.province}
+                                </h3>
                             </div>
 
                             <div className="space-y-4 mt-6">
@@ -228,14 +232,14 @@ const ExplorationProjects = () => {
                         
                         <div className="text-center p-4 lg:p-6 bg-white rounded-lg border border-gray-200">
                             <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">
-                                {totalArea.toLocaleString()} Ha
+                                {totalArea.toLocaleString()}+ Ha
                             </div>
                             <div className="text-base lg:text-lg font-medium text-gray-900">Total Exploration Area</div>
                             <div className="text-gray-600 text-sm lg:text-base mt-2">Strategic land portfolio</div>
                         </div>
                         
                         <div className="text-center p-4 lg:p-6 bg-white rounded-lg border border-gray-200">
-                            <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">4+</div>
+                            <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">10+</div>
                             <div className="text-base lg:text-lg font-medium text-gray-900">Mineral Commodities</div>
                             <div className="text-gray-600 text-sm lg:text-base mt-2">Diversified portfolio focus</div>
                         </div>
