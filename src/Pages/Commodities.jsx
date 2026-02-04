@@ -1,7 +1,7 @@
 import Seo from '../components/Seo'
 import coal from '../imgs/home/coal.png' 
 import chrome from '../imgs/home/chrome.png' 
-import iron from '../imgs/home/iron.png' 
+import ironore from '../imgs/home/IronOre.png' 
 import limestone from '../imgs/home/limestone.png' 
 import platinum from '../imgs/home/platinum.png' 
 import manganese from '../imgs/home/manganese.png'
@@ -22,8 +22,8 @@ const Commodities = () => {
             description: "Strategic mineral with active processing and exploration initiatives"
         },
         {
-            name: "Iron",
-            image: iron,
+            name: "Iron Ore",
+            image: ironore,
             description: "Essential industrial mineral in our exploration programs"
         },
         {

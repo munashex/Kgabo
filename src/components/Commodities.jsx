@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import coal from '../imgs/home/coal.png' 
 import chrome from '../imgs/home/chrome.png' 
-import iron from '../imgs/home/iron.png' 
+import ironore from '../imgs/home/IronOre.png' 
 import limestone from '../imgs/home/limestone.png' 
 import platinum from '../imgs/home/platinum.png' 
 import manganese from '../imgs/home/manganese.png'
@@ -18,8 +18,8 @@ const commodities = [
         image: chrome,
     },
     {
-        name: "Iron",
-        image: iron,
+        name: "Iron Ore",
+        image: ironore,
     },
     {
         name: "Limestone",
