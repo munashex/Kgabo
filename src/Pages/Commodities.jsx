@@ -6,6 +6,8 @@ import limestone from '../imgs/home/limestone.webp'
 import platinum from '../imgs/home/plantinum.jpeg' 
 import manganese from '../imgs/home/manganese.jpeg'
 import commoditiesImage from '../imgs/commodities/commodities.jpg'
+import { FaEnvelope } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Commodities = () => {
     const commodities = [ 
@@ -157,6 +159,36 @@ const Commodities = () => {
                 </div>
             </div>
         </div>
+
+         {/* Quick Contact CTA */}
+         <div className="bg-linear-to-r mx-4 lg:mx-16 mt-20 lg:mt-32 from-[#004179] to-[#04b7ef] rounded-lg p-8 lg:p-12 text-white">
+                    <div className="text-center">
+                        <h2 className="text-2xl lg:text-4xl font-bold mb-6">
+                            Ready to Partner With Us?
+                        </h2>
+                        <p className="text-white/90 max-w-2xl mx-auto mb-8">
+                            Whether you're interested in coal supply, exploration partnerships, 
+                            or technical advisory services, our team is ready to connect.
+                        </p>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a 
+                                href="mailto:info@kgmgroup.co.za"
+                                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-[#004179] font-bold rounded-full hover:bg-gray-100 transition-colors duration-300"
+                            >
+                                <FaEnvelope className="w-5 h-5" />
+                                <span>Email Us Now</span>
+                            </a>
+                            
+                            <Link 
+                                to="/about"
+                                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors duration-300"
+                            >
+                                <span>Learn About Our Operations</span>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
         </>
     );
 };
