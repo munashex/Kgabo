@@ -3,60 +3,59 @@ import Seo from '../components/Seo'
 import { SEO_CONFIG } from '../constants/seo'
 
 const ExplorationProjects = () => {
-    const explorationProjects = [
+    const totalArea = 9237;
+
+    const provinceFootprint = [
         {
-            name: "Hetblok",
-            location: "Springs, Gauteng (Delmas boundary)",
-            area: "501 Ha",
-            status: "Exploration Phase",
-            stage: "Initial Assessment",
-            commodities: ["Coal", "Other Minerals"],
-            description: "Early-stage exploration project in mineral-rich region with promising geological indicators.",
-            distance: "Boundary to Delmas, Mpumalanga"
-        },
-        {
-            name: "Vischkuil",
-            location: "Springs, Gauteng (Delmas boundary)",
-            area: "2,516 Ha",
-            status: "Advanced Exploration",
-            stage: "Resource Evaluation",
-            commodities: ["Coal", "Chrome"],
-            description: "Large-scale exploration property undergoing detailed resource assessment and drilling programs.",
-            distance: "Major mineral corridor"
-        },
-        {
-            name: "Valschpruit",
-            location: "Bronkhorstspruit, Gauteng (R25 road)",
-            area: "1,781 Ha",
-            status: "Exploration Phase",
-            stage: "Geological Mapping",
-            commodities: ["Coal", "Industrial Minerals"],
-            description: "Strategic location along R25 transport corridor with established mining infrastructure nearby.",
-            distance: "Along R25 road corridor"
-        },
-        {
-            name: "Grootspruit",
-            location: "Bronkhorstspruit, Gauteng (R25 road)",
-            area: "949 Ha",
-            status: "Exploration Phase",
-            stage: "Initial Assessment",
-            commodities: ["Coal"],
-            description: "Compact exploration license with favorable geology adjacent to existing mining operations.",
-            distance: "Bronkhorstspruit mining district"
-        },
-        {
-            name: "Onspoed",
-            location: "Balmoral, Mpumalanga (N4 road)",
+            province: "Mpumalanga",
             area: "3,270 Ha",
-            status: "Advanced Exploration",
-            stage: "Resource Evaluation",
-            commodities: ["Coal", "Manganese", "Chrome"],
-            description: "Major exploration property in Mpumalanga's mining heartland with multi-commodity potential.",
-            distance: "Proximity to N4 national highway"
+            projects: 1,
+            description: "Strategic location in South Africa's mining heartland with rich mineral deposits.",
+            commodities: ["Coal", "Manganese", "Chrome"]
+        },
+        {
+            province: "Gauteng",
+            area: "5,967 Ha",
+            projects: 4,
+            description: "Multiple exploration licenses across key mining corridors with established infrastructure.",
+            commodities: ["Coal", "Chrome", "Industrial Minerals"]
         }
     ];
 
-    const totalArea = 9237;
+    const commodityFocus = [
+        {
+            commodity: "Coal",
+            icon: "⚫",
+            coverage: "All Provinces",
+            description: "Primary focus mineral with extensive exploration across our entire portfolio"
+        },
+        {
+            commodity: "Chrome",
+            icon: "⚪",
+            coverage: "Gauteng, Mpumalanga",
+            description: "Strategic mineral with growing market demand and export potential"
+        },
+        {
+            commodity: "Iron",
+            icon: "🔴",
+            coverage: "Selected Regions",
+            description: "Targeted exploration in mineral-rich geological formations"
+        },
+        {
+            commodity: "Manganese",
+            icon: "🟣",
+            coverage: "Mpumalanga",
+            description: "High-value mineral with significant industrial applications"
+        }
+    ];
+
+    const regionalFootprint = [
+        "Mpumalanga",
+        "Gauteng",
+        "North West",
+        "Limpopo",
+        "Northern Cape"
+    ];
 
     return (
         <>
@@ -77,7 +76,7 @@ const ExplorationProjects = () => {
                 <div className="relative h-full flex items-center px-4 lg:px-16">
                     <div className="max-w-3xl space-y-4 lg:space-y-6">
                         <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-white">
-                            Our Exploration Portfolio
+                            Our Exploration Footprint
                         </h1>
                         
                         <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-white max-w-2xl">
@@ -93,14 +92,14 @@ const ExplorationProjects = () => {
                         <div className="flex flex-wrap gap-4 pt-4">
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 lg:p-4">
                                 <div className="text-xl lg:text-2xl font-bold text-white">5</div>
-                                <div className="text-white/80 text-sm lg:text-base">Active Projects</div>
+                                <div className="text-white/80 text-sm lg:text-base">Provinces</div>
                             </div>
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 lg:p-4">
                                 <div className="text-xl lg:text-2xl font-bold text-white">{totalArea.toLocaleString()} Ha</div>
                                 <div className="text-white/80 text-sm lg:text-base">Total Area</div>
                             </div>
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 lg:p-4">
-                                <div className="text-xl lg:text-2xl font-bold text-white">5+</div>
+                                <div className="text-xl lg:text-2xl font-bold text-white">4+</div>
                                 <div className="text-white/80 text-sm lg:text-base">Target Commodities</div>
                             </div>
                         </div>
@@ -108,11 +107,11 @@ const ExplorationProjects = () => {
                 </div>
             </div>
 
-            {/* Exploration Projects Grid */}
+            {/* Provincial Footprint */}
             <div className="mt-12 lg:mt-28 px-4 lg:px-16">
                 <div className="mb-8 lg:mb-12">
                     <h2 className="text-2xl font-bold lg:text-4xl mb-4">
-                        Exploration Projects
+                        Provincial Footprint
                     </h2>
                     <p className="text-lg lg:text-xl lg:max-w-3xl">
                         Our strategic exploration portfolio spans {totalArea.toLocaleString()} hectares across 
@@ -121,43 +120,34 @@ const ExplorationProjects = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
-                    {explorationProjects.map((project) => (
+                    {provinceFootprint.map((province) => (
                         <div 
-                            key={project.name}
+                            key={province.province}
                             className="bg-white border-l-4 border-[#004179] rounded-r-lg p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
                         >
                             <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3">
                                 <div className="flex-1">
                                     <h3 className="text-xl lg:text-2xl font-bold text-[#004179]">
-                                        {project.name}
+                                        {province.province}
                                     </h3>
                                     <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mt-1">
-                                        <span className="text-gray-600">{project.location}</span>
+                                        <span className="font-medium text-gray-900">{province.area}</span>
                                         <span className="hidden sm:inline text-gray-400">•</span>
-                                        <span className="font-medium text-gray-900">{project.area}</span>
+                                        <span className="text-gray-600">{province.projects} {province.projects === 1 ? 'Project' : 'Projects'}</span>
                                     </div>
                                 </div>
-                                <span className="px-3 py-1 bg-blue-50 text-[#004179] text-sm font-medium rounded-full self-start sm:self-auto">
-                                    {project.status}
-                                </span>
                             </div>
 
                             <div className="space-y-4 mt-6">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <div className="text-gray-500 mb-1">Exploration Stage</div>
-                                        <div className="font-medium text-gray-900">{project.stage}</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-gray-500 mb-1">Proximity</div>
-                                        <div className="font-medium text-gray-900">{project.distance}</div>
-                                    </div>
+                                <div>
+                                    <div className="text-gray-500 mb-1">Description</div>
+                                    <p className="text-gray-700">{province.description}</p>
                                 </div>
 
                                 <div>
                                     <div className="text-gray-500 mb-2">Target Commodities</div>
                                     <div className="flex flex-wrap gap-2">
-                                        {project.commodities.map((commodity, idx) => (
+                                        {province.commodities.map((commodity, idx) => (
                                             <span 
                                                 key={idx}
                                                 className="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full"
@@ -167,14 +157,54 @@ const ExplorationProjects = () => {
                                         ))}
                                     </div>
                                 </div>
-
-                                <div>
-                                    <div className="text-gray-500 mb-1">Project Description</div>
-                                    <p className="text-gray-700">{project.description}</p>
-                                </div>
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Commodity Focus */}
+                <div className="mb-12 lg:mb-24">
+                    <h2 className="text-2xl font-bold lg:text-4xl mb-8">
+                        Commodity Focus
+                    </h2>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                        {commodityFocus.map((item) => (
+                            <div 
+                                key={item.commodity}
+                                className="bg-white border-l-4 border-[#004179] rounded-r-lg p-6 shadow-sm"
+                            >
+                                <div className="text-3xl mb-4">{item.icon}</div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.commodity}</h3>
+                                <div className="text-sm text-gray-500 mb-3">{item.coverage}</div>
+                                <p className="text-gray-600 text-sm">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Regional Presence */}
+                <div className="mb-12 lg:mb-24">
+                    <h2 className="text-2xl font-bold lg:text-4xl mb-8">
+                        Regional Presence
+                    </h2>
+                    
+                    <div className="bg-white rounded-lg border border-gray-200 p-6 lg:p-8">
+                        <p className="text-gray-600 mb-6">
+                            Kgabo Mokgatla Group maintains an active exploration footprint across five provinces in South Africa:
+                        </p>
+                        
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                            {regionalFootprint.map((province) => (
+                                <div 
+                                    key={province}
+                                    className="bg-linear-to-br from-[#004179]/10 to-[#04b7ef]/10 rounded-lg p-4 text-center"
+                                >
+                                    <div className="text-lg font-bold text-[#004179]">{province}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
                 {/* Portfolio Summary */}
@@ -192,8 +222,8 @@ const ExplorationProjects = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
                         <div className="text-center p-4 lg:p-6 bg-white rounded-lg border border-gray-200">
                             <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">5</div>
-                            <div className="text-base lg:text-lg font-medium text-gray-900">Active Projects</div>
-                            <div className="text-gray-600 text-sm lg:text-base mt-2">Across Gauteng & Mpumalanga</div>
+                            <div className="text-base lg:text-lg font-medium text-gray-900">Active Provinces</div>
+                            <div className="text-gray-600 text-sm lg:text-base mt-2">Strategic coverage</div>
                         </div>
                         
                         <div className="text-center p-4 lg:p-6 bg-white rounded-lg border border-gray-200">
@@ -205,7 +235,7 @@ const ExplorationProjects = () => {
                         </div>
                         
                         <div className="text-center p-4 lg:p-6 bg-white rounded-lg border border-gray-200">
-                            <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">5+</div>
+                            <div className="text-3xl lg:text-4xl font-bold text-[#004179] mb-2">4+</div>
                             <div className="text-base lg:text-lg font-medium text-gray-900">Mineral Commodities</div>
                             <div className="text-gray-600 text-sm lg:text-base mt-2">Diversified portfolio focus</div>
                         </div>
