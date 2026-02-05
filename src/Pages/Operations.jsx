@@ -168,9 +168,6 @@ const Operations = () => {
                         <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                             Coal Supply Capacity
                         </h3>
-                        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                            We hereby express our interest in supplying coal to Sasol Limited with our coal resources.
-                        </p>
                         <p className="text-gray-600 mt-4">
                             Current production capacity: Up to 120,000 tons per month
                         </p>
