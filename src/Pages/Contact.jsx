@@ -91,8 +91,10 @@ const Contact = () => {
                                 <h3 className="text-xl font-bold text-gray-900">Head Office</h3>
                             </div>
                             <div className="text-gray-700">
-                                Pretoria, Gauteng<br />
-                                Menlyn, South Africa
+                                175 Corobay Avenue<br />
+                                Menlyn Corporate Park<br />
+                                Suite -O Fourth Floor<br />
+                                WaterKloof Glen, Pretoria 0181
                             </div>
                             <p className="text-gray-600 mt-2 text-sm">
                                 Based in the heart of South Africa's mining industry
@@ -111,17 +113,17 @@ const Contact = () => {
                         <div className="p-6 border-b border-gray-200">
                             <div className="flex items-center gap-3">
                                 <FaMapMarkerAlt className="w-5 h-5 text-[#004179]" />
-                                <h3 className="text-lg font-bold text-gray-900">Menlyn Corporate Park, Pretoria</h3>
+                                <h3 className="text-lg font-bold text-gray-900">Kgabo Mokgatla Group Pty Ltd</h3>
                             </div>
                             <p className="text-gray-600 mt-1">
-                                175 Corobay Avenue, Suite O Fourth Floor, WaterKloof Glen, Pretoria 0181
+                                175 Corobay Avenue, Menlyn Corporate Park, Suite -O Fourth Floor. WaterKloof Glen, Pretoria 0181
                             </p>
                         </div>
                         
                         {/* Google Maps Embed */}
                         <div className="w-full h-100 lg:h-125">
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d57485.6980795786!2d28.2788086!3d-25.7753152!3m2!1i1024!2i768!4f13.1!2m1!1sKgabo%20Mokgatla%20Group%20Pty%20Ltd%20175%20Corobay%20Avenue%20Menlyn%20Corporate%20Park%20Suite%20O%20Fourth%20Floor%20WaterKloof%20Glen%20Pretoria%200181!5e0!3m2!1sen!2sza!4v1770191569761!5m2!1sen!2sza"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.4155131204166!2d28.27610157536603!3d-25.7898625472275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9560b91937f563%3A0xfa4604ccb027d53e!2sMenlyn%20Corporate%20Park!5e0!3m2!1sen!2sza!4v1770271993591!5m2!1sen!2sza"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

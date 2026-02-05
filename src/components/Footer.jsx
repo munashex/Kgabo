@@ -105,8 +105,10 @@ const Footer = () => {
                                 <FaMapMarkerAlt className="w-5 h-5 text-[#04b7ef] mt-1 shrink-0" />
                                 <div className="text-sm text-white">
                                     <div className="font-medium text-white mb-1">Head Office</div>
-                                    Pretoria, Gauteng<br />
-                                    Menlyn, South Africa
+                                    175 Corobay Avenue<br />
+                                    Menlyn Corporate Park<br />
+                                    Suite -O Fourth Floor<br />
+                                    WaterKloof Glen, Pretoria 0181
                                 </div>
                             </li>
                             
