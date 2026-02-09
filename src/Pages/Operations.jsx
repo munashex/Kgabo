@@ -13,7 +13,6 @@ const Operations = () => {
             area: "350 Ha",
             details: [
                 "3 mining permits within 350 Ha prospecting right",
-                "Water use license in progress",
                 "Average strip ratio: 1.3",
                 "Neighboring to Palesa Colliery, HCI Coal",
                 "37km north of Bronkhorstspruit"
@@ -31,7 +30,6 @@ const Operations = () => {
             details: [
                 "3 mining permits secured",
                 "Mining right in progress",
-                "Water use license in progress",
                 "Opposite new Palesa Colliery, HCI Coal box-cut",
                 "Green field project"
             ],
