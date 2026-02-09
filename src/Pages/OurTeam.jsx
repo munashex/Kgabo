@@ -34,7 +34,7 @@ const Team = () => {
                         backgroundImage: `url(${teamImage})`
                     }}
                 >
-                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-black/70"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-black via-black/50 to-black/50"></div>
                 </div>
                 
                 <div className="relative h-full flex items-center px-4 lg:px-16">

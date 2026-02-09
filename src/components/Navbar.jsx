@@ -32,19 +32,19 @@ const Navbar = () => {
         <div className="bg-white">
             {/* Large Screen Navbar */}
             <div className="hidden lg:block ">
-                <div className="container mx-auto px-6 lg:px-12 py-4">
+                <div className="container mx-auto px-4 lg:px-8 xl:px-16 py-3 lg:py-4">
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link to="/" className="shrink-0">
                             <img 
                                 src={Logo} 
                                 alt="KGABO MOKGATLA GROUP" 
-                                className="w-56 hover:opacity-90 transition-opacity duration-200"
+                                className="w-44 lg:w-52 xl:w-56 hover:opacity-90 transition-opacity duration-200"
                             /> 
                         </Link>
 
                         {/* Navigation Links */}
-                        <div className="flex items-center space-x-8">
+                        <div className="flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
                             {navLinks.map((item) => {
                                 if (item.isDropdown) {
                                     return (
@@ -54,24 +54,26 @@ const Navbar = () => {
                                             onMouseEnter={() => setIsBusinessOpen(true)}
                                             onMouseLeave={() => setIsBusinessOpen(false)}
                                         >
-                                            <button className="flex items-center space-x-1 text-lg font-semibold text-gray-800 hover:text-[#014277] transition-colors duration-200 py-2">
+                                            <button className="flex items-center space-x-1 text-base lg:text-lg font-semibold text-gray-800 hover:text-[#014277] transition-colors duration-200 py-2">
                                                 <span>{item.name}</span>
                                                 <CgChevronDown className={`w-4 h-4 transition-transform duration-200 ${isBusinessOpen ? 'rotate-180' : ''}`} />
                                             </button>
                                             
                                             {/* Dropdown Menu */}
                                             {isBusinessOpen && (
-                                                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 animate-fade-in">
-                                                    {item.items.map((subItem) => (
-                                                        <Link
-                                                            key={subItem.name}
-                                                            to={subItem.path}
-                                                            className="block px-6 py-3 text-gray-700 hover:bg-[#014277]/5 hover:text-[#014277] transition-colors duration-200 font-medium"
-                                                            onClick={() => setIsBusinessOpen(false)}
-                                                        >
-                                                            {subItem.name}
-                                                        </Link>
-                                                    ))}
+                                                <div className="absolute top-full left-0 pt-2 z-50">
+                                                    <div className="w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 animate-fade-in">
+                                                        {item.items.map((subItem) => (
+                                                            <Link
+                                                                key={subItem.name}
+                                                                to={subItem.path}
+                                                                className="block px-6 py-3 text-gray-700 hover:bg-[#014277]/5 hover:text-[#014277] transition-colors duration-200 font-medium"
+                                                                onClick={() => setIsBusinessOpen(false)}
+                                                            >
+                                                                {subItem.name}
+                                                            </Link>
+                                                        ))}
+                                                    </div>
                                                 </div>
                                             )}
                                         </div>
@@ -82,9 +84,9 @@ const Navbar = () => {
                                     <Link
                                         key={item.name}
                                         to={item.path}
-                                        className={`text-lg font-semibold py-2 transition-colors duration-200 ${
+                                        className={`text-base lg:text-lg font-semibold py-2 transition-colors duration-200 ${
                                             item.name === 'Contact' 
-                                                ? 'bg-[#014277] text-white px-6 py-2 rounded-full hover:bg-[#01b9f1] hover:scale-105 transition-all duration-300'
+                                                ? 'bg-[#014277] text-white px-4 lg:px-6 py-2 rounded-full hover:bg-[#01b9f1] hover:scale-105 transition-all duration-300'
                                                 : 'text-gray-800 hover:text-[#014277]'
                                         }`}
                                     >
